@@ -3,31 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background-image: url(../images/deadsnake\ bg\ \(2\).jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.92);
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        header {
+            padding: 40px;
+            border-bottom: 3px solid #000;
+            background: #fff;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 40px;
+            border-bottom: 3px solid #000;
+            background: #f5f5f5;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            border: 2px solid #000;
+            background: #fff;
+        }
+
+        /* Main content area */
+        main {
+            padding: 40px;
+        }
+
+        /* Section headers */
+        .section-header {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Post/Content blocks */
+        .content-block {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: #fff;
+            border: 2px solid #000;
+        }
+
+        .content-block:hover {
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+            transform: translate(-2px, -2px);
+            transition: all 0.2s;
+        }
+
+        .content-block h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .content-block .meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .content-block p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .content-block a {
+            color: #000;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        /* Grid for projects/works */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .grid-item {
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #000;
+            text-align: center;
+        }
+
+        .grid-item:hover {
+            background: #f5f5f5;
+        }
+
+        .grid-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .grid-item p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Dividers */
+        .divider {
+            height: 2px;
+            background: #000;
+            margin: 40px 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 40px;
+            border-top: 3px solid #000;
+            background: #f5f5f5;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #000;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                border: 2px solid #000;
+            }
+
+            header, nav, main, footer {
+                padding: 24px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
+        <header>
+            <h1>YOUR NAME</h1>
+            <p>personal site / digital garden / whatever</p>
+        </header>
+
         <nav>
-            <h1>Your Name</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/projects.html">Projects</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
+            <a href="#posts">Posts</a>
+            <a href="#ideas">Ideas</a>
+            <a href="#projects">Projects</a>
+            <a href="#works">Works</a>
         </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Welcome to My Portfolio</h2>
-            <p>I'm a web developer learning HTML and CSS.</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+
+        <main>
+            <!-- POSTS SECTION -->
+            <section id="posts">
+                <h2 class="section-header">Recent Posts</h2>
+                
+                <div class="content-block">
+                    <h3>Post Title Goes Here</h3>
+                    <div class="meta">October 1, 2025 • 3 min read</div>
+                    <p>This is where you write about whatever you want. Could be thoughts, tutorials, random observations. Keep it real and personal. <a href="#">Read more →</a></p>
+                </div>
+
+                <div class="content-block">
+                    <h3>Another Post Title</h3>
+                    <div class="meta">September 28, 2025 • 5 min read</div>
+                    <p>Share your experiences, learnings, or just document your journey. The beauty of a personal site is you make the rules. <a href="#">Read more →</a></p>
+                </div>
+
+                <div class="content-block">
+                    <h3>Yet Another Post</h3>
+                    <div class="meta">September 15, 2025 • 2 min read</div>
+                    <p>Short thoughts, long essays, code snippets, whatever feels right. This is your space. <a href="#">Read more →</a></p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- IDEAS SECTION -->
+            <section id="ideas">
+                <h2 class="section-header">Ideas</h2>
+                
+                <div class="content-block">
+                    <h3>💡 Random Idea #1</h3>
+                    <p>Quick thoughts and half-baked concepts. Sometimes the best ideas start rough.</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>💡 Random Idea #2</h3>
+                    <p>Another thing you're thinking about. Could turn into a project, could stay an idea. Both are fine.</p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects">
+                <h2 class="section-header">Projects</h2>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <h4>Project Name</h4>
+                        <p>Brief description</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Project Name</h4>
+                        <p>Brief description</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Project Name</h4>
+                        <p>Brief description</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- WORKS SECTION -->
+            <section id="works">
+                <h2 class="section-header">Works</h2>
+                
+                <div class="content-block">
+                    <h3>Work Title</h3>
+                    <div class="meta">Client / Company • 2025</div>
+                    <p>Description of professional work, collaborations, or commissions. <a href="#">View →</a></p>
+                </div>
+
+                <div class="content-block">
+                    <h3>Another Work</h3>
+                    <div class="meta">Client / Company • 2024</div>
+                    <p>More professional stuff you've done. Keep it concise. <a href="#">View →</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Your Name • <a href="mailto:you@email.com">you@email.com</a> • Made with HTML & CSS</p>
+        </footer>
+    </div>
 </body>
 </html>
